@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic forms</title>
+    <style>
+        body{
+            background-color: rgb(158, 196, 243);
+            font-family: fantasy;
+        }
+        form{
+            margin: 20px;
+            padding:20px;
+            background-color:rgb(170, 172, 173);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        label{
+            color:rgb(0, 0, 0);
+            background-color: rgb(180, 180, 180);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: small;
+        }
+        .pass{
+            background-color:antiquewhite;
+            color:darkcyan
+        }
+         .gd{
+            border: 2px solid black;
+            border-radius: 20px;
+            margin:50px;
+            padding:50px;
+            background-color:rgb(204, 204, 204);
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+    <ul>
+        <li><a href="forms.html" target="_blanks">Forms</li></a>
+        <li><a href="../HTML/tables.html" target="_blanks">table</li></a>
+    </ul>
+   </nav>
+    <h1 style="text-align:center; color:rgb(230, 213, 121);background-color:rgb(163, 138, 230); font-family:Georgia, 'Times New Roman', Times, serif">Basic Forms</h1>
+    <form action="/submit" method="post">
+        <div class="gd">
+        <label class="pass" for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        </div>
+        <label class="pass" for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        <label class="pass" for="male">Male</label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label class="pass" for="female">Female</label>
+        <input type="radio" id="female" name="gender" value="female" required><br><br>   
+        <label class="pass" for="department">Department</label>
+        <select id="department" name="department" required>
+            <option value="cse">CSE</option>
+            <option value="ise">ISE</option>
+            <option value="ece">ECE</option>
+            <option value="mech">MECH</option>
+            <option value="civil">CIVIL</option>
+            <option value="aiml">AIML</option>
+        </select><br><br>
+         <label class="pass" for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        <label class="pass" for="date" >DOB</label>
+        <input type="date" id="date" name="date" required><br><br>
+        <textarea>Description</textarea><br><br>
+        <label class="pass" for="video">Upload video</label>
+        <input type="file" id="file" name="file" accept="video/*" required><br><br>
+        <label class="pass" for="pdf">Upload PDF file</label>
+        <input type="file" id="pdf" name="pdf" accept="Application/pdf" required><br><br>
+        <label class="pass" for="doc">Upload document</label>
+        <input type="file" id="doc" name="doc" accept="Application/docx" required><br><br>
+        <label class="pass" for="rating">Rate us:</label>
+        <input type="range" id="rating" name="rating" min="1" max="10" required><br><br>
+        <label class="pass" for="color">Choose your favorite color:</label>
+        <input type="color" id="color" name="color" required><br><br>
+        <h3>Terms and conditions</h3>
+        <label>
+        <input type="checkbox" name="terms" required> I agree to the terms and conditions</label><br><br>
+        <button type="reset">Reset</button>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
